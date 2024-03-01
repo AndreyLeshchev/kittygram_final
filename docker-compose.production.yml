@@ -3,14 +3,17 @@ version: '3'
 volumes:
   pg_data:
   static:
+  media:
 
 services:
   db:
     image: postgres:13
+    env_file: .env
     volumes:
       - pg_data:/var/lib/postgresql/data
+
   backend:
-    build: ./backend/
+    image: andreysmart/kittygram_backend
     env_file: .env
     depends_on:
       - db
@@ -19,19 +22,19 @@ services:
       - media:/app/media
 
   frontend:
+    image: andreysmart/kittygram_frontend
     env_file: .env
-    build: ./frontend/
     depends_on:
-      - backend
+      - backend  
     command: cp -r /app/build/. /static/
     volumes:
       - static:/static
 
   gateway:
-    build: ./nginx/
+    image: andreysmart/kittygram_gateway
     env_file: .env
     depends_on:
-      - frontend
+      - frontend  
     ports:
       - 9000:80
     volumes:
