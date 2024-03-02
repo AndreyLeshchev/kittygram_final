@@ -34,6 +34,7 @@ services:
     image: andreysmart/kittygram_gateway
     env_file: .env
     depends_on:
+      - frontend
     ports:
       - 9000:80
     volumes:
