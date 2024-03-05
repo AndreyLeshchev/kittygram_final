@@ -31,6 +31,9 @@ services:
   gateway:
     build: ./nginx/
     env_file: .env.example
+    depends_on:
+      - backend
+      - frontend
     ports:
       - 9000:80
     volumes:
