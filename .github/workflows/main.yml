@@ -185,4 +185,4 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: (github.actor), деплой kittygram успешно выполнен!
+          message: ${{ github.actor }} github.actor , деплой kittygram успешно выполнен!
