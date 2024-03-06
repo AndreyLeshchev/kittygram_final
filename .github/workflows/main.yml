@@ -185,4 +185,4 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: ${{ github.actor }}, пакет изменений '${{ github.event.commits[0].message }}' - https://github.com/${{ github.repository }}/commit/${{github.sha}} был успешно выполнен в проект kittygram!
+          message: ${{ github.repository }}, '${{ github.event.commits[0].message }}' - https://github.com/${{ github.repository }}/commit/${{github.sha}} пакет изменений внесен успешно.
