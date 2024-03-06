@@ -1,5 +1,5 @@
 ### Как запустить проект:
-
+![example event parameter](https://github.com/github/docs/actions/workflows/main.yml/badge.svg?event=push)
 Клонировать репозиторий и перейти в него в командной строке:
 
 ```
