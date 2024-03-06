@@ -4,8 +4,8 @@ Kittygram — социальная платформа для обмена фот
 
 ## Используемые технологии:
 * Python 3.9
-* Django==3.2.3
-* djangorestframework==3.12.4
+* Django 3.2.3
+* djangorestframework 3.12.4
 * Nginx
 * gunicorn
 ## Как запустить проект:
