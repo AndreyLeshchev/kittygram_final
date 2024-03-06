@@ -152,4 +152,3 @@ media/
 node_modules
 
 docker-compose.yml
-setup.cfg
