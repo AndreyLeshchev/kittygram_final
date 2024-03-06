@@ -1,54 +1,61 @@
-### Как запустить проект:
+![example workflow](https://github.com/AndreyLeshchev/kittygram_final/workflows/Kittygram%20workflow/badge.svg)
 
-Клонировать репозиторий и перейти в него в командной строке:
+# Как запустить проект:
 
-```
-git clone https://github.com/yandex-praktikum/kittygram_backend.git
-```
-
-```
-cd kittygram_backend
-```
-
-Cоздать и активировать виртуальное окружение:
-
-```
-python3 -m venv env
-```
-
-* Если у вас Linux/macOS
+1. Клонировать репозиторий и перейти в него в командной строке:
 
     ```
-    source env/bin/activate
+    git clone https://github.com/yandex-praktikum/kittygram_backend.git
+    ```
+    ```
+    cd kittygram_backend
     ```
 
-* Если у вас windows
-
+    Cоздать и активировать виртуальное окружение:
+    
     ```
-    source env/scripts/activate
+    python3 -m venv env
     ```
-
-```
-python3 -m pip install --upgrade pip
-```
-
-Установить зависимости из файла requirements.txt:
-
-```
-pip install -r requirements.txt
-```
-
-Выполнить миграции:
-
-```
-python3 manage.py migrate
-```
-
-Запустить проект:
-
-```
-python3 manage.py runserver
-```
+    
+    * Если у вас Linux/macOS
+    
+        ```
+        source env/bin/activate
+        ```
+    
+    * Если у вас windows
+    
+        ```
+        source venv/Scripts/activate
+        ```
+    
+    Установить зависимости из файла requirements.txt:
+    ```
+    python3 -m pip install --upgrade pip
+    ```
+    ```
+    pip install -r requirements.txt
+    ```
+    
+    Выполнить миграции:
+    
+    ```
+    python3 manage.py migrate
+    ```
+    
+    Для переменных окружения в директории проекта создаем файл .env со следующим содержимым: 
+    
+    ```
+    - POSTGRES_USER — имя пользователя БД (необязательная переменная, значение по умолчанию — postgres);
+    - POSTGRES_PASSWORD — пароль пользователя БД (обязательная переменная для создания БД в контейнере);
+    - POSTGRES_DB — название базы данных (необязательная переменная, по умолчанию совпадает с POSTGRES_USER).
+    - DB_HOST — адрес, по которому Django будет соединяться с базой данных. При работе нескольких контейнеров в сети Docker network вместо адреса указывают имя контейнера, где запущен сервер БД, — в нашем случае это контейнер db.
+    - DB_PORT — порт, по которому Django будет обращаться к базе данных. 5432 — это порт по умолчанию для PostgreSQL.
+    - DEBUG = включать/выключать отладочный режим приложения в зависимости от текущего окружения (необязательная переменная, значение по умолчанию — False)
+    - ALLOWED_HOSTS = список хостов/доменов, для которых может работать текущий сайт (необязательная переменная, значение по умолчанию — 127.0.0.1, localhost).
+    - USE_DB - возможность сменить базу данных sqlite/postgresql (необязательная переменная, значение по умолчанию — postgresql).
+    ```
+2. Подготовка проекта для развертывания на сервере: 
 
 #  Как работать с репозиторием финального задания
 
