@@ -1,6 +1,6 @@
 ### Как запустить проект:
 
-https://github.com/AndreyLeshchev/kittygram_final/workflows//Kittygram%20workflow/badge.svg
+![example workflow](https://github.com/AndreyLeshchev/kittygram_final/workflows//Kittygram%20workflow/badge.svg)
 
 Клонировать репозиторий и перейти в него в командной строке:
 
