@@ -1,7 +1,6 @@
 ### Как запустить проект:
-![example event parameter](https://github.com/github/docs/actions/workflows/main.yml/badge.svg?event=push)
-![example workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
-https://github.com/OWNER/REPOSITORY/actions/workflows/WORKFLOW-FILE/badge.svg
+
+https://github.com/AndreyLeshchev/kittygram_final/workflows//Kittygram%20workflow/badge.svg
 
 Клонировать репозиторий и перейти в него в командной строке:
 
